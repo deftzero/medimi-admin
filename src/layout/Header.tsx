@@ -39,10 +39,12 @@ export function AppHeader({ name = 'Jon Jones' }: { name?: string }) {
         <ToggleLanguage />
         <Notification />
         <Dropdown menu={{ items }} trigger={['click']}>
-          <div className='flex flex-row leading-3 px-1 py-1 items-center gap-2 hover:cursor-pointer rounded-full bg-slate-200'>
-            <Avatar>{name.split(' ')[0]?.charAt(0)}{name.split(' ')[1]?.charAt(0)}</Avatar>
+          <div className='flex flex-row leading-3 p-1 items-center gap-2 hover:cursor-pointer rounded-full bg-slate-200'>
+            <Avatar src="https://i.pravatar.cc/300">{name.split(' ')[0]?.charAt(0)}{name.split(' ')[1]?.charAt(0)}</Avatar>
             <span>{name}</span>
-            <ChevronDown />
+            <div className='ms-2 me-2'>
+              <ChevronDown height={7} />
+            </div>
           </div>
         </Dropdown>
       </div>

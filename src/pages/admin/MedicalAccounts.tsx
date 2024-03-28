@@ -121,9 +121,7 @@ const columns: TableProps<IMedicalAccounts>['columns'] = [
 ]
 
 function MedicalAccountsTable({ data }: { data: IMedicalAccounts[] }) {
-  return (
-    <Table columns={columns} dataSource={data} />
-  )
+  return <Table columns={columns} dataSource={data} />
 }
 
 function MedicalAccountsFilter() {
