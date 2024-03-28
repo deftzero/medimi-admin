@@ -85,7 +85,7 @@ export function Sidebar() {
       <div className='flex justify-center w-full mt-5'>
         <img src={Logo} className='h-16' />
       </div>
-      <ul className="list-none space-y-2 px-5 mt-8">
+      <ul className="list-none space-y-2 px-3 mt-8">
         {sidebarItems.map((link: any) =>
           <li key={link.title}>
             <SidebarLink link={link} />
@@ -98,10 +98,8 @@ export function Sidebar() {
 
 const SidebarLink = ({
   link,
-  active = false,
 }: {
   link: ISidebarLink;
-  active?: boolean;
 }) => {
 
   const activeIconColor = '#f1f5f9'
@@ -112,7 +110,7 @@ const SidebarLink = ({
   return (
     <Link
       to={link.href}
-      className={`group transition-colors p-2.5 inline-block hover:bg-popover text-xs hover:shadow rounded-md w-full${location.pathname.includes(link.href) ? " font-semibold bg-primary text-slate-100 hover:bg-primary hover:text-slate-100" : " text-slate-500 hover:text-slate-500"
+      className={`group transition-colors py-2.5 pl-5 inline-block hover:bg-popover text-xs hover:shadow rounded-md w-full${location.pathname.includes(link.href) ? " font-semibold bg-primary text-slate-100 hover:bg-primary hover:text-slate-100" : " text-slate-500 hover:text-slate-500"
         }`}
     >
       <div className="flex items-center space-x-2">

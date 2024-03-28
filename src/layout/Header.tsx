@@ -1,5 +1,6 @@
 import { Layout, Input, Avatar, Dropdown, MenuProps, Select } from 'antd';
 import Search from '../assets/icons/search.svg?react'
+import ChevronDown from '../assets/icons/chevron-down.svg?react'
 import { useTranslation } from 'react-i18next';
 import Notification from '../assets/icons/notification-bing.svg?react'
 const { Header } = Layout;
@@ -41,9 +42,7 @@ export function AppHeader({ name = 'Jon Jones' }: { name?: string }) {
           <div className='flex flex-row leading-3 px-1 py-1 items-center gap-2 hover:cursor-pointer rounded-full bg-slate-200'>
             <Avatar>{name.split(' ')[0]?.charAt(0)}{name.split(' ')[1]?.charAt(0)}</Avatar>
             <span>{name}</span>
-            <svg className="w-2.5 h-2.5 ms-2 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
-            </svg>
+            <ChevronDown />
           </div>
         </Dropdown>
       </div>

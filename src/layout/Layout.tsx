@@ -19,9 +19,9 @@ export default function AppLayout({ children }: { children: any }) {
       <Layout style={{ marginLeft: 215 }}>
         <AppHeader />
         <Content style={contentStyles}>
-          <div className='p-12 bg-white rounded-md text-center h-full'>
+          {/* <div className='p-12 bg-white rounded-md text-center h-full'> */}
             {children}
-          </div>
+          {/* </div> */}
         </Content>
       </Layout>
     </Layout>
