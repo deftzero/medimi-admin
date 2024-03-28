@@ -8,6 +8,7 @@ import Patients from '../assets/icons/patient.svg?react'
 import Incomes from '../assets/icons/income-1.svg?react'
 import RemoteRevenue from '../assets/icons/remote-revenue.svg?react'
 import Users from '../assets/icons/users.svg?react'
+import { useTranslation } from 'react-i18next';
 
 const { Sider } = Layout;
 
@@ -19,7 +20,8 @@ const siderStyle: any = {
   position: 'fixed',
   left: 0,
   top: 0,
-  bottom: 0
+  bottom: 0,
+  zIndex: 2
 };
 
 export interface ISidebarLink {
@@ -29,58 +31,61 @@ export interface ISidebarLink {
   icon?: any;
 }
 
-const sidebarItems: ISidebarLink[] = [
-  {
-    key: 1,
-    icon: Dashboard,
-    title: 'Dashboard',
-    href: "/dashboard"
-  },
-  {
-    key: 2,
-    icon: MedicalAccounts,
-    title: 'Medical Accounts',
-    href: "/accounts"
-  },
-  {
-    key: 3,
-    icon: Countries,
-    title: 'Countries',
-    href: "/journal-voucher"
-  },
-  {
-    key: 4,
-    icon: Patients,
-    title: 'Patients',
-    href: "/general-ledger"
-  },
-  {
-    key: 5,
-    icon: Incomes,
-    title: 'Incomes',
-    href: "/general-ledger"
-  },
-  {
-    key: 6,
-    icon: RemoteRevenue,
-    title: 'Remote Revenue',
-    href: "/general-ledger"
-  },
-  {
-    key: 4,
-    icon: Users,
-    title: 'Users',
-    href: "/general-ledger"
-  },
-]
 
 export function Sidebar() {
+  const { t } = useTranslation();
+
+  const sidebarItems: ISidebarLink[] = [
+    {
+      key: 1,
+      icon: Dashboard,
+      title: t('NAVIGATION.DASHBOARD'),
+      href: "/dashboard"
+    },
+    {
+      key: 2,
+      icon: MedicalAccounts,
+      title: 'Medical Accounts',
+      href: "/accounts"
+    },
+    {
+      key: 3,
+      icon: Countries,
+      title: 'Countries',
+      href: "/journal-voucher"
+    },
+    {
+      key: 4,
+      icon: Patients,
+      title: 'Patients',
+      href: "/general-ledger"
+    },
+    {
+      key: 5,
+      icon: Incomes,
+      title: 'Incomes',
+      href: "/general-ledger"
+    },
+    {
+      key: 6,
+      icon: RemoteRevenue,
+      title: 'Remote Revenue',
+      href: "/general-ledger"
+    },
+    {
+      key: 4,
+      icon: Users,
+      title: 'Users',
+      href: "/general-ledger"
+    },
+  ]
+  
   return (
     <Sider style={siderStyle} width={225}>
       <div className='flex justify-center w-full mt-5'>
-        <img src={Logo} className='h-20' />
+        <img src={Logo} className='h-16' />
       </div>
-      <ul className="list-none space-y-1 px-5 mt-5">
+      <ul className="list-none space-y-1 px-5 mt-8">
         {sidebarItems.map((link: any) =>
           <li key={link.title}>
             <SidebarLink link={link} />
