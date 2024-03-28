@@ -1,7 +1,13 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Outlet, createBrowserRouter } from "react-router-dom";
 import LoginPage from "../pages/Login";
-import AppLayout from "../layout";
-
+import AppLayout from "../layout/Layout";
+import Dashboard from "../pages/admin/Dashboard";
+import MedicalAccounts from "../pages/admin/MedicalAccounts";
+import Countries from "../pages/admin/Countries";
+import Patients from "../pages/admin/Patients";
+import Incomes from "../pages/admin/Incomes";
+import RemoteRevenue from "../pages/admin/RemoteRevenue";
+import Users from "../pages/admin/Users";
 
 export const router = createBrowserRouter([
   {
@@ -11,8 +17,37 @@ export const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <AppLayout>
-      
-    </AppLayout>,
+    element: <AppLayout><Outlet /></AppLayout>,
+    children: [
+      {
+        index: true,
+        path: "/dashboard",
+        element: <Dashboard />
+      },
+      {
+        path: "/medical-accounts",
+        element: <MedicalAccounts />
+      },
+      {
+        path: "/countries",
+        element: <Countries />
+      },
+      {
+        path: "/patients",
+        element: <Patients />
+      },
+      {
+        path: "/incomes",
+        element: <Incomes />
+      },
+      {
+        path: "/remote-revenue",
+        element: <RemoteRevenue />
+      },
+      {
+        path: "/users",
+        element: <Users />
+      },
+    ]
   }
 ])

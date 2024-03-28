@@ -1,6 +1,6 @@
 import { Layout } from 'antd';
 import Logo from '../assets/medimi-logo-colors.png'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Dashboard from '../assets/icons/dashboard.svg?react'
 import MedicalAccounts from '../assets/icons/medical-accounts.svg?react'
 import Countries from '../assets/icons/countries.svg?react'
@@ -46,37 +46,37 @@ export function Sidebar() {
       key: 2,
       icon: MedicalAccounts,
       title: 'Medical Accounts',
-      href: "/accounts"
+      href: "/medical-accounts"
     },
     {
       key: 3,
       icon: Countries,
       title: 'Countries',
-      href: "/journal-voucher"
+      href: "/countries"
     },
     {
       key: 4,
       icon: Patients,
       title: 'Patients',
-      href: "/general-ledger"
+      href: "/patients"
     },
     {
       key: 5,
       icon: Incomes,
       title: 'Incomes',
-      href: "/general-ledger"
+      href: "/incomes"
     },
     {
       key: 6,
       icon: RemoteRevenue,
       title: 'Remote Revenue',
-      href: "/general-ledger"
+      href: "/remote-revenue"
     },
     {
       key: 4,
       icon: Users,
       title: 'Users',
-      href: "/general-ledger"
+      href: "/users"
     },
   ]
   
@@ -85,7 +85,7 @@ export function Sidebar() {
       <div className='flex justify-center w-full mt-5'>
         <img src={Logo} className='h-16' />
       </div>
-      <ul className="list-none space-y-1 px-5 mt-8">
+      <ul className="list-none space-y-2 px-5 mt-8">
         {sidebarItems.map((link: any) =>
           <li key={link.title}>
             <SidebarLink link={link} />
@@ -107,14 +107,16 @@ const SidebarLink = ({
   const activeIconColor = '#f1f5f9'
   const iconColor = '#64748b'
 
+  const location = useLocation()
+
   return (
     <Link
       to={link.href}
-      className={`group transition-colors p-3 inline-block hover:bg-popover text-xs hover:shadow rounded-md w-full${active ? " font-semibold bg-primary text-slate-100 hover:bg-primary hover:text-slate-100" : " text-slate-500 hover:text-slate-500"
+      className={`group transition-colors p-2.5 inline-block hover:bg-popover text-xs hover:shadow rounded-md w-full${location.pathname.includes(link.href) ? " font-semibold bg-primary text-slate-100 hover:bg-primary hover:text-slate-100" : " text-slate-500 hover:text-slate-500"
         }`}
     >
       <div className="flex items-center space-x-2">
-        <link.icon fill={active ? activeIconColor : iconColor } />
+        <link.icon fill={location.pathname.includes(link.href) ? activeIconColor : iconColor } />
         <span>{link.title}</span>
       </div>
     </Link>
