@@ -5,7 +5,7 @@ import AppButton from "../../components/ui/AppButton";
 
 const { Title } = Typography;
 
-interface ICountries {
+interface ICountry {
   id: string;
   name: string;
   from: string;
@@ -18,7 +18,7 @@ interface ICountries {
 
 export default function Countries() {
 
-  const data: ICountries[] = [
+  const data: ICountry[] = [
     {
       id: 'C1',
       name: 'Senegal',
@@ -54,7 +54,7 @@ export default function Countries() {
   )
 }
 
-const columns: TableProps<ICountries>['columns'] = [
+const columns: TableProps<ICountry>['columns'] = [
   {
     title: 'Name',
     dataIndex: 'name',
@@ -82,6 +82,6 @@ const columns: TableProps<ICountries>['columns'] = [
   }
 ]
 
-function CountriesTable({ data }: { data: ICountries[] }) {
+function CountriesTable({ data }: { data: ICountry[] }) {
   return <Table columns={columns} dataSource={data} />
 }

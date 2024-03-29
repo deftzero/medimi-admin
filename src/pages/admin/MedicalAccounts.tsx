@@ -10,7 +10,7 @@ import { useState } from "react";
 const { Title } = Typography;
 
 
-interface IMedicalAccounts {
+interface IMedicalAccount {
   id: string;
   name: string;
   type: string;
@@ -25,7 +25,7 @@ interface IMedicalAccounts {
 
 export default function MedicalAccounts() {
 
-  const data: IMedicalAccounts[] = [
+  const data: IMedicalAccount[] = [
     {
       id: 'SN-H1',
       name: 'Clinique Amitie',
@@ -69,7 +69,7 @@ export default function MedicalAccounts() {
 }
 
 
-const columns: TableProps<IMedicalAccounts>['columns'] = [
+const columns: TableProps<IMedicalAccount>['columns'] = [
   {
     title: 'ID',
     dataIndex: 'id',
@@ -120,7 +120,7 @@ const columns: TableProps<IMedicalAccounts>['columns'] = [
   },
 ]
 
-function MedicalAccountsTable({ data }: { data: IMedicalAccounts[] }) {
+function MedicalAccountsTable({ data }: { data: IMedicalAccount[] }) {
   return <Table columns={columns} dataSource={data} />
 }
 
@@ -132,7 +132,7 @@ function MedicalAccountsFilter() {
 
   const [form] = Form.useForm()
 
-  function handleSubmit(values: IMedicalAccounts) {
+  function handleSubmit(values: IMedicalAccount) {
     console.log(values)
   }
 
