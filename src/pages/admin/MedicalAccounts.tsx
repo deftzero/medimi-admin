@@ -10,7 +10,7 @@ import { useState } from "react";
 const { Title } = Typography;
 
 
-interface IMedicalAccount {
+export interface IMedicalAccount {
   id: string;
   name: string;
   type: string;
@@ -69,12 +69,12 @@ export default function MedicalAccounts() {
 }
 
 
-const columns: TableProps<IMedicalAccount>['columns'] = [
+export const columns: TableProps<IMedicalAccount>['columns'] = [
   {
     title: 'ID',
     dataIndex: 'id',
     key: 'id',
-    render: (text) => <a>{text}</a>,
+    render: (text) => <span>{text}</span>,
   },
   {
     title: 'Name',
@@ -120,7 +120,7 @@ const columns: TableProps<IMedicalAccount>['columns'] = [
   },
 ]
 
-function MedicalAccountsTable({ data }: { data: IMedicalAccount[] }) {
+export function MedicalAccountsTable({ data }: { data: IMedicalAccount[] }) {
   return <Table columns={columns} dataSource={data} />
 }
 
@@ -238,7 +238,7 @@ function MedicalAccountsFilterForm({ form, handleSubmit }: { form: any, handleSu
 }
 
 
-function returnTagColorByStatus(status: string) {
+export function returnTagColorByStatus(status: string) {
   const colorMap: any = {
     Ongoing: 'magenta',
     Validated: 'blue'

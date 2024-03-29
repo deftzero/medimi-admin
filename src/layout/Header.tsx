@@ -33,7 +33,7 @@ export function AppHeader({ name = 'Jon Jones' }: { name?: string }) {
   ];
 
   return (
-    <Header style={headerStyles} className='flex justify-between sticky top-0'>
+    <Header style={headerStyles} className='flex justify-between sticky top-0 z-10'>
       <Input prefix={<Search />} className='bg-slate-50' placeholder='Search' style={{ maxWidth: '400px' }} />
       <div className='flex flex-row items-center gap-3'>
         <ToggleLanguage />
