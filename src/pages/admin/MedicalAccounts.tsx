@@ -1,11 +1,11 @@
 import { Drawer, Form, Input, Select, Table, TableProps, Tag, Typography } from "antd";
-import Add from '../../assets/icons/add.svg?react'
 import Filter from '../../assets/icons/filter.svg?react'
 import Close from '../../assets/icons/close.svg?react'
 import Search from '../../assets/icons/search.svg?react'
 import AppButton from "../../components/ui/AppButton";
 import { dateFormatter } from "../../utils";
 import { useState } from "react";
+import AddAccount from "../../components/pages/medical-accounts/AddAccount";
 
 const { Title } = Typography;
 
@@ -54,7 +54,7 @@ export default function MedicalAccounts() {
     <div className="space-y-5">
       <div className="header flex flex-row justify-between items-center">
         <Title level={3} className='mt-3'>Medical Accounts</Title>
-        <AppButton type='primary' size='small' icon={<Add />}>Add an Account</AppButton>
+        <AddAccount />
       </div>
 
       <div className="bg-white p-5 rounded-md space-y-5">
