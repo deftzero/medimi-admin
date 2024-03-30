@@ -3,11 +3,13 @@ import LoginPage from "../pages/Login";
 import AppLayout from "../layout/Layout";
 import Dashboard from "../pages/admin/Dashboard";
 import MedicalAccounts from "../pages/admin/MedicalAccounts";
-import Countries from "../pages/admin/Countries";
-import Patients from "../pages/admin/Patients";
+import Countries from "../pages/admin/countries/Countries";
+import Patients from "../pages/admin/patients/Patients";
 import Incomes from "../pages/admin/Incomes";
 import RemoteRevenue from "../pages/admin/RemoteRevenue";
 import Users from "../pages/admin/Users";
+import Country from "../pages/admin/countries/Country";
+import Patient from "../pages/admin/patients/Patient";
 
 export const router = createBrowserRouter([
   {
@@ -33,8 +35,16 @@ export const router = createBrowserRouter([
         element: <Countries />
       },
       {
+        path: "/countries/:id",
+        element: <Country />
+      },
+      {
         path: "/patients",
-        element: <Patients />
+        element: <Patients />,
+      },
+      {
+        path: "/patients/:id",
+        element: <Patient />
       },
       {
         path: "/incomes",

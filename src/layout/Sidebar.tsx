@@ -21,7 +21,7 @@ const siderStyle: any = {
   left: 0,
   top: 0,
   bottom: 0,
-  zIndex: 2
+  zIndex: 20
 };
 
 export interface ISidebarLink {

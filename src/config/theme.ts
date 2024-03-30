@@ -6,6 +6,10 @@ export const theme = {
   components: {
     Form: {
       marginLG: 10,
-    }
+    },
+    Segmented: {
+      itemSelectedBg: '#254F72',
+      itemSelectedColor: '#ffffff',
+    },
   }
 }

@@ -5,12 +5,13 @@ import AppButton from "../../components/ui/AppButton";
 
 const { Title } = Typography;
 
-interface IUser {
+export interface IUser {
   id: string;
   firstName: string;
   lastName: string;
   avatar: string;
   phoneNumber: string;
+  dob?: Date,
   email: string;
   type: string;
   createdAt?: Date;

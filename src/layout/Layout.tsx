@@ -6,7 +6,6 @@ const { Content } = Layout;
 
 const contentStyles = {
   minHeight: '85dvh',
-  lineHeight: '120px',
   margin: '24px 24px',
   overflow: 'initial'
 }
