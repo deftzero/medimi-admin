@@ -9,10 +9,10 @@ export interface IPatient {
   id: string;
   firstName: string;
   lastName: string;
-  avatar: string;
-  phoneNumber: string;
-  email: string;
-  type: string;
+  avatar?: string;
+  phoneNumber?: string;
+  email?: string;
+  type?: string;
   address?: string
   dob?: Date
   telephone?: string

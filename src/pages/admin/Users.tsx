@@ -29,33 +29,35 @@ const selectOptions: any = [
   }
 ]
 
+export const userData: IUser[] = [
+  {
+    id: 'P1',
+    firstName: 'John',
+    lastName: 'Allen',
+    avatar: 'https://i.pravatar.cc/300',
+    phoneNumber: '778412563',
+    email: 'johnallen@gmail.com',
+    type: 'Global',
+    createdAt: new Date(),
+    status: 'ACTIVE'
+  },
+  {
+    id: 'P2',
+    firstName: 'Emily',
+    lastName: 'Davis',
+    avatar: 'https://i.pravatar.cc/300',
+    phoneNumber: '778412563',
+    email: 'emily.davis@example.com',
+    type: 'Local',
+    createdAt: new Date(),
+    status: 'INACTIVE'
+  },
+]
+
 
 export default function Users() {
 
-  const data: IUser[] = [
-    {
-      id: 'P1',
-      firstName: 'John',
-      lastName: 'Allen',
-      avatar: 'https://i.pravatar.cc/300',
-      phoneNumber: '778412563',
-      email: 'johnallen@gmail.com',
-      type: 'Global',
-      createdAt: new Date(),
-      status: 'ACTIVE'
-    },
-    {
-      id: 'P2',
-      firstName: 'Emily',
-      lastName: 'Davis',
-      avatar: 'https://i.pravatar.cc/300',
-      phoneNumber: '778412563',
-      email: 'emily.davis@example.com',
-      type: 'Local',
-      createdAt: new Date(),
-      status: 'INACTIVE'
-    },
-  ]
+  
 
   return (
     <div className="space-y-5">
@@ -76,7 +78,7 @@ export default function Users() {
             ))}
           </Select>
         </div>
-        <PatientsTable data={data} />
+        <PatientsTable data={userData} />
       </div>
     </div>
   )

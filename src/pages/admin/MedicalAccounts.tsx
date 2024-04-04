@@ -13,42 +13,44 @@ const { Title } = Typography;
 export interface IMedicalAccount {
   id: string;
   name: string;
-  type: string;
-  address: string;
-  country: string;
-  region: string;
-  city: string;
-  createdAt: Date;
-  status: string
+  type?: string;
+  address?: string;
+  country?: string;
+  region?: string;
+  city?: string;
+  createdAt?: Date;
+  status?: string
 }
+
+export const data: IMedicalAccount[] = [
+  {
+    id: 'SN-H1',
+    name: 'Clinique Amitie',
+    type: 'AH2',
+    address: 'Liberty 6 BP, Dakar',
+    country: 'Senegal',
+    region: 'Dakar',
+    city: 'Dakar',
+    createdAt: new Date(),
+    status: 'Ongoing'
+  },
+  {
+    id: 'SN-H2',
+    name: 'Clinique Amitie',
+    type: 'AH2',
+    address: 'Liberty 6 BP, Dakar',
+    country: 'Senegal',
+    region: 'Dakar',
+    city: 'Dakar',
+    createdAt: new Date(),
+    status: 'Validated'
+  }
+]
 
 
 export default function MedicalAccounts() {
 
-  const data: IMedicalAccount[] = [
-    {
-      id: 'SN-H1',
-      name: 'Clinique Amitie',
-      type: 'AH2',
-      address: 'Liberty 6 BP, Dakar',
-      country: 'Senegal',
-      region: 'Dakar',
-      city: 'Dakar',
-      createdAt: new Date(),
-      status: 'Ongoing'
-    },
-    {
-      id: 'SN-H2',
-      name: 'Clinique Amitie',
-      type: 'AH2',
-      address: 'Liberty 6 BP, Dakar',
-      country: 'Senegal',
-      region: 'Dakar',
-      city: 'Dakar',
-      createdAt: new Date(),
-      status: 'Validated'
-    }
-  ]
+  
 
   return (
     <div className="space-y-5">
