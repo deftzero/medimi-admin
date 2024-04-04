@@ -28,7 +28,7 @@ export const data = {
 
 const sliceThickness = {
   id: 'sliceThickness',
-  beforeDraw(chart: any, plugins: any) {
+  beforeDraw(chart: any) {
     chart.getDatasetMeta(0).data[1].outerRadius = 65
   }
 }

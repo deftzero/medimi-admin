@@ -1,7 +1,6 @@
 import { Col, Row, Space, Typography } from "antd";
 import Filter from '../../assets/icons/filter.svg?react'
 import DoubleChevronRight from '../../assets/icons/double-chevron-right.svg?react'
-import Add from '../../assets/icons/add.svg?react'
 import AppButton from "../../components/ui/AppButton";
 
 const { Title } = Typography;
