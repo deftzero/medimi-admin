@@ -1,7 +1,8 @@
 import { Avatar, Input, Select, Table, TableProps, Tag, Typography } from "antd";
-import Search from '../../assets/icons/search.svg?react'
-import Add from '../../assets/icons/add.svg?react'
-import AppButton from "../../components/ui/AppButton";
+import Search from '../../../assets/icons/search.svg?react'
+import Add from '../../../assets/icons/add.svg?react'
+import AppButton from "../../../components/ui/AppButton";
+import { Link } from "react-router-dom";
 
 const { Title } = Typography;
 
@@ -87,8 +88,7 @@ export default function Users() {
 const columns: TableProps<IUser>['columns'] = [
   {
     title: 'ID',
-    dataIndex: 'id',
-    key: 'id',
+    render: (data) => <Link className="text-slate-800 hover:text-secondary" to={`/users/${data.id}`}>{data.id}</Link>
   },
   {
     title: 'Name',

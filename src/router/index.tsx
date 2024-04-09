@@ -7,9 +7,10 @@ import Countries from "../pages/admin/countries/Countries";
 import Patients from "../pages/admin/patients/Patients";
 import Incomes from "../pages/admin/Incomes";
 import RemoteRevenue from "../pages/admin/RemoteRevenue";
-import Users from "../pages/admin/Users";
+import Users from "../pages/admin/users/Users";
 import Country from "../pages/admin/countries/Country";
 import Patient from "../pages/admin/patients/Patient";
+import User from "../pages/admin/users/User";
 
 export const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ export const router = createBrowserRouter([
       {
         path: "/users",
         element: <Users />
+      },
+      {
+        path: "/users/:id",
+        element: <User />
       },
     ]
   }
