@@ -1,5 +1,5 @@
 import { Select, Typography } from "antd";
-import { IMedicalAccount, MedicalAccountsTable } from "../../../pages/admin/MedicalAccounts";
+import { IMedicalAccount, MedicalAccountsTable } from "../../../pages/admin/medical-accounts/MedicalAccounts";
 const { Title } = Typography;
 
 

@@ -5,7 +5,7 @@ import Filter from '../../assets/icons/filter.svg?react'
 import Close from '../../assets/icons/close.svg?react'
 import AppButton from "../../components/ui/AppButton";
 import { IPatient } from "./patients/Patients";
-import { IMedicalAccount } from "./MedicalAccounts";
+import { IMedicalAccount } from "./medical-accounts/MedicalAccounts";
 import { dateFormatter } from "../../utils";
 
 const { Title } = Typography;
