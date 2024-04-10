@@ -8,9 +8,9 @@ const { Title } = Typography
 
 export default function IncomeDetails() {
 
-  let [searchParams, setSearchParams] = useSearchParams();
-
-  let country = searchParams.get("country");
+  // use search param to filter data
+  // let [searchParams] = useSearchParams();
+  // let country = searchParams.get("country");
 
   return (
     <div className="space-y-5">
@@ -20,7 +20,7 @@ export default function IncomeDetails() {
           <Link to={'/incomes'} className=''>
             <ChevronLeft />
           </Link>
-          <Title level={3} className='mt-2'>Medical Account Details {country}</Title>
+          <Title level={3} className='mt-2'>Medical Account Details</Title>
         </div>
         <AppButton type='primary' size='small' icon={<Download fill='white' />}>Generate Details</AppButton>
       </div>

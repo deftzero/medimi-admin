@@ -47,7 +47,7 @@ const columns: TableProps<ISubscription>['columns'] = [
   {
     title: 'Action',
     render: (item: any) => (
-      <span><Eye /></span>
+      <span key={item.id}><Eye /></span>
     )
   },
 ];

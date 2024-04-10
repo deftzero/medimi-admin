@@ -1,6 +1,5 @@
 import { Input, Table } from "antd"
 import Search from '../../../assets/icons/search.svg?react'
-import { render } from "react-dom"
 import { dateFormatter } from "../../../utils"
 
 const subsData = [
