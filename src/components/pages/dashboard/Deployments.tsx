@@ -1,5 +1,6 @@
 import { Select, Typography } from "antd";
-import { IMedicalAccount, MedicalAccountsTable } from "../../../pages/admin/medical-accounts/MedicalAccounts";
+import { MedicalAccountsTable } from "../../../pages/admin/medical-accounts/MedicalAccounts";
+import { medicalAccountData } from "../../../data/mock-data";
 const { Title } = Typography;
 
 
@@ -16,30 +17,6 @@ const selectOptions: any = [
 
 export default function Deployments() {
 
-  const data: IMedicalAccount[] = [
-    {
-      id: 'SN-H1',
-      name: 'Clinique Amitie',
-      type: 'AH2',
-      address: 'Liberty 6 BP, Dakar',
-      country: 'Senegal',
-      region: 'Dakar',
-      city: 'Dakar',
-      createdAt: new Date(),
-      status: 'Ongoing'
-    },
-    {
-      id: 'SN-H2',
-      name: 'Clinique Amitie',
-      type: 'AH2',
-      address: 'Liberty 6 BP, Dakar',
-      country: 'Senegal',
-      region: 'Dakar',
-      city: 'Dakar',
-      createdAt: new Date(),
-      status: 'Validated'
-    }
-  ]
 
   return (
     <>
@@ -54,7 +31,7 @@ export default function Deployments() {
             ))}
           </Select>
         </div>
-        <MedicalAccountsTable data={data} />
+        <MedicalAccountsTable data={medicalAccountData} />
       </div>
     </>
   )

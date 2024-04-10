@@ -1,5 +1,5 @@
 import { Avatar, Tag, Typography } from "antd";
-import { IMedicalAccount } from "../../../pages/admin/medical-accounts/MedicalAccounts";
+import { IMedicalAccount } from "../../../data/interfaces";
 const { Title } = Typography
 
 export default function Details({ data }: { data: IMedicalAccount }) {

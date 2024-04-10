@@ -2,10 +2,11 @@ import { Avatar, Segmented, Table, TableProps, Typography } from 'antd';
 import ChevronLeft from '../../../assets/icons/chevron-left.svg?react'
 import Add from '../../../assets/icons/add.svg?react'
 import { Link, useParams } from 'react-router-dom';
-import { ICity, ICountry, IRegion, countryData } from './Countries'
 import AppButton from '../../../components/ui/AppButton';
 import { dateFormatter } from '../../../utils';
 import { useState } from 'react';
+import { ICity, ICountry, IRegion } from '../../../data/interfaces';
+import { countryData } from '../../../data/mock-data';
 const { Title } = Typography;
 
 
@@ -41,27 +42,27 @@ function Details({ data }: { data: ICountry }) {
       <Avatar src={'https://flagcdn.com/w2560/sn.png'} size={64}></Avatar>
       <div>
         <p className='text-slate-500 my-0 py-0 text-xs'>Name</p>
-        <p className='my-1 font-semibold'>{data.name}</p>
+        <p className='my-1 font-medium'>{data.name}</p>
       </div>
       <div>
         <p className='text-slate-500 my-0 py-0 text-xs'>From</p>
-        <p className='my-1 font-semibold'>{data.from}</p>
+        <p className='my-1 font-medium'>{data.from}</p>
       </div>
       <div>
         <p className='text-slate-500 my-0 py-0 text-xs'>Health Authority Name</p>
-        <p className='my-1 font-semibold'>{data.healthAuthName}</p>
+        <p className='my-1 font-medium'>{data.healthAuthName}</p>
       </div>
       <div>
         <p className='text-slate-500 my-0 py-0 text-xs'>Characterization</p>
-        <p className='my-1 font-semibold'>{data.characterization}</p>
+        <p className='my-1 font-medium'>{data.characterization}</p>
       </div>
       <div>
         <p className='text-slate-500 my-0 py-0 text-xs'>Code ISO</p>
-        <p className='my-1 font-semibold'>{data.iso}</p>
+        <p className='my-1 font-medium'>{data.iso}</p>
       </div>
       <div>
         <p className='text-slate-500 my-0 py-0 text-xs'>Time Zone</p>
-        <p className='my-1 font-semibold'>{data.timezone}</p>
+        <p className='my-1 font-medium'>{data.timezone}</p>
       </div>
     </div>
   )

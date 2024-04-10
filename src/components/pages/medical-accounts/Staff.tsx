@@ -1,9 +1,8 @@
 import { Table, TableProps, Tag } from "antd";
-import { IStaff } from "../../../pages/admin/medical-accounts/MedicalAccounts";
 import { dateFormatter } from "../../../utils";
+import { IStaff } from "../../../data/interfaces";
 
-
-const columns: TableProps<IStaff>['columns']= [
+const columns: TableProps<IStaff>['columns'] = [
   {
     title: 'ID',
     dataIndex: 'id',

@@ -2,8 +2,8 @@ import { Divider, List, Typography } from "antd";
 import Download from '../../../assets/icons/download.svg?react'
 import FileDoc from '../../../assets/file-doc.svg?react'
 import FilePdf from '../../../assets/file-pdf.svg?react'
-import { IFile } from "../../../pages/admin/medical-accounts/MedicalAccounts";
 import { byteToHumanSize } from "../../../utils";
+import { IFile } from "../../../data/interfaces";
 
 const { Title } = Typography;
 

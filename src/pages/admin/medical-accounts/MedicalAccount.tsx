@@ -5,7 +5,6 @@ import Add from '../../../assets/icons/add.svg?react'
 import { Segmented, Typography } from 'antd';
 import AppButton from '../../../components/ui/AppButton';
 import { useState } from 'react';
-import { IMedicalAccount, IService, IStaff, ISubscription, medicalAccountData } from './MedicalAccounts';
 import Details from '../../../components/pages/medical-accounts/Details';
 import AddressTable from '../../../components/pages/medical-accounts/AddressTable';
 import Documents from '../../../components/pages/medical-accounts/Documents';
@@ -13,9 +12,10 @@ import Gallery from '../../../components/pages/medical-accounts/Gallery';
 import Subscriptions from '../../../components/pages/medical-accounts/Subscriptions';
 import Staff from '../../../components/pages/medical-accounts/Staff';
 import Services from '../../../components/pages/medical-accounts/Services';
+import { IMedicalAccount, IService, IStaff, ISubscription } from '../../../data/interfaces';
+import { medicalAccountData } from '../../../data/mock-data';
 
 const { Title } = Typography;
-
 
 export default function MedicalAccount() {
 

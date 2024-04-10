@@ -1,10 +1,10 @@
 import { Table, TableProps, Tag } from "antd";
 import Eye from '../../../assets/icons/eye.svg?react'
-import { IAddress, ISubscription } from "../../../pages/admin/medical-accounts/MedicalAccounts";
 import { dateFormatter } from "../../../utils";
+import { ISubscription } from "../../../data/interfaces";
 
 
-const columns: TableProps<ISubscription>['columns']= [
+const columns: TableProps<ISubscription>['columns'] = [
   {
     title: 'Subscription Type',
     dataIndex: 'type',

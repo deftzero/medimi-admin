@@ -1,5 +1,5 @@
 import { Table, TableProps } from "antd";
-import { IAddress } from "../../../pages/admin/medical-accounts/MedicalAccounts";
+import { IAddress } from "../../../data/interfaces";
 
 
 const columns: TableProps<IAddress>['columns']= [

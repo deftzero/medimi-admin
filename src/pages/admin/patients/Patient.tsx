@@ -2,8 +2,9 @@ import { Link, useParams } from "react-router-dom";
 import ChevronLeft from '../../../assets/icons/chevron-left.svg?react'
 import QrCode from '../../../assets/qrcode.svg?react'
 import { Avatar, Typography } from "antd";
-import { IPatient, patientData } from "./Patients";
 import { dateFormatter } from "../../../utils";
+import { IPatient } from "../../../data/interfaces";
+import { patientData } from "../../../data/mock-data";
 const { Title } = Typography;
 
 
@@ -48,19 +49,19 @@ function BasicDetails({ data }: { data: IPatient }) {
         <div className="center flex flex-wrap gap-10">
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>ID</p>
-            <p className='my-1 font-semibold'>{data.id}</p>
+            <p className='my-1 font-medium'>{data.id}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Phone Number</p>
-            <p className='my-1 font-semibold'>{data.phoneNumber}</p>
+            <p className='my-1 font-medium'>{data.phoneNumber}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Email</p>
-            <p className='my-1 font-semibold'>{data.email}</p>
+            <p className='my-1 font-medium'>{data.email}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Type</p>
-            <p className='my-1 font-semibold'>{data.type}</p>
+            <p className='my-1 font-medium'>{data.type}</p>
           </div>
         </div>
       </div>
@@ -82,27 +83,27 @@ function Vitals({ data }: { data: IPatient }) {
         <div className="center flex flex-wrap gap-10">
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>ID</p>
-            <p className='my-1 font-semibold'>{data.id}</p>
+            <p className='my-1 font-medium'>{data.id}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>First Name</p>
-            <p className='my-1 font-semibold'>{data.firstName}</p>
+            <p className='my-1 font-medium'>{data.firstName}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Last Name</p>
-            <p className='my-1 font-semibold'>{data.lastName}</p>
+            <p className='my-1 font-medium'>{data.lastName}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Date of Birth</p>
-            <p className='my-1 font-semibold'>{dateFormatter(data.dob)}</p>
+            <p className='my-1 font-medium'>{dateFormatter(data.dob)}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Address</p>
-            <p className='my-1 font-semibold'>{data.address}</p>
+            <p className='my-1 font-medium'>{data.address}</p>
           </div>
           <div>
             <p className='text-slate-500 my-0 py-0 text-xs'>Tel</p>
-            <p className='my-1 font-semibold'>{data.telephone}</p>
+            <p className='my-1 font-medium'>{data.telephone}</p>
           </div>
         </div>
       </div>
@@ -112,15 +113,15 @@ function Vitals({ data }: { data: IPatient }) {
           <div className="center flex flex-wrap gap-10 mt-5">
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Blood Type</p>
-              <p className='my-1 font-semibold'>{data.bloodType}</p>
+              <p className='my-1 font-medium'>{data.bloodType}</p>
             </div>
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Background</p>
-              <p className='my-1 font-semibold'>{data.background}</p>
+              <p className='my-1 font-medium'>{data.background}</p>
             </div>
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Field</p>
-              <p className='my-1 font-semibold'>{data.field}</p>
+              <p className='my-1 font-medium'>{data.field}</p>
             </div>
           </div>
         </div>
@@ -129,11 +130,11 @@ function Vitals({ data }: { data: IPatient }) {
           <div className="center flex flex-wrap gap-10 mt-5">
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Height</p>
-              <p className='my-1 font-semibold'>{data.height}</p>
+              <p className='my-1 font-medium'>{data.height}</p>
             </div>
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Weight</p>
-              <p className='my-1 font-semibold'>{data.weight}</p>
+              <p className='my-1 font-medium'>{data.weight}</p>
             </div>
           </div>
         </div>
@@ -151,25 +152,25 @@ function Relatives({ data }: { data: IPatient }) {
           <div className="bg-gray-100 flex flex-wrap gap-10 mt-5 p-5">
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>First Name</p>
-              <p className='my-1 font-semibold'>{item.firstName}</p>
+              <p className='my-1 font-medium'>{item.firstName}</p>
             </div>
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Last Name</p>
-              <p className='my-1 font-semibold'>{item.lastName}</p>
+              <p className='my-1 font-medium'>{item.lastName}</p>
             </div>
 
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Date of Birth</p>
-              <p className='my-1 font-semibold'>{dateFormatter(item.dob)}</p>
+              <p className='my-1 font-medium'>{dateFormatter(item.dob)}</p>
             </div>
             <div>
               <p className='text-slate-500 my-0 py-0 text-xs'>Phone Number</p>
-                <p className='my-1 font-semibold'>{item.phoneNumber}</p>
-              </div>
+              <p className='my-1 font-medium'>{item.phoneNumber}</p>
             </div>
+          </div>
 
         ))}
-          </div>
+      </div>
     </div>
-      )
+  )
 }

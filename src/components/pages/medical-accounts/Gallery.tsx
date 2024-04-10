@@ -1,6 +1,6 @@
 import { Divider, Typography } from "antd";
-import { IFile } from "../../../pages/admin/medical-accounts/MedicalAccounts";
 import { Image } from 'antd';
+import { IFile } from "../../../data/interfaces";
 
 
 const { Title } = Typography;

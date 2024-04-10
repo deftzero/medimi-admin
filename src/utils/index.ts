@@ -14,3 +14,11 @@ export const byteToHumanSize = (bytes: any = 0, decimals = 2) => {
   }
   return parseFloat(bytes).toFixed(decimals) + " " + units[i];
 };
+
+export function returnTagColorByStatus(status: string) {
+  const colorMap: any = {
+    ACTIVE: 'green',
+    INACTIVE: 'red'
+  }
+  return colorMap[status]
+}

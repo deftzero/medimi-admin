@@ -1,6 +1,6 @@
 import { Table, TableProps, Tag } from "antd";
-import { IService } from "../../../pages/admin/medical-accounts/MedicalAccounts";
 import { dateFormatter } from "../../../utils";
+import { IService } from "../../../data/interfaces";
 
 
 const columns: TableProps<IService>['columns']= [

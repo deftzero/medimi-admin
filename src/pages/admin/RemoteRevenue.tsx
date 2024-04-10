@@ -4,63 +4,11 @@ import { useState } from "react";
 import Filter from '../../assets/icons/filter.svg?react'
 import Close from '../../assets/icons/close.svg?react'
 import AppButton from "../../components/ui/AppButton";
-import { IPatient } from "./patients/Patients";
-import { IMedicalAccount } from "./medical-accounts/MedicalAccounts";
 import { dateFormatter } from "../../utils";
+import { IRemoteRevenue } from "../../data/interfaces";
+import { remoteRevenueData } from "../../data/mock-data";
 
 const { Title } = Typography;
-
-export interface IRemoteRevenue {
-  id: string;
-  date: Date;
-  time: string;
-  patient: IPatient;
-  medicalAccount: IMedicalAccount;
-  totalAmount: number;
-  commission: number;
-  createdAt: Date;
-  status: string
-}
-
-
-export const remoteRevenueData: IRemoteRevenue[] = [
-  {
-    id: 'RR-1',
-    date: new Date(),
-    time: '12:10',
-    patient: {
-      id: 'P1',
-      firstName: 'John',
-      lastName: 'Allen',
-    },
-    medicalAccount: {
-      id: 'SN-H1',
-      name: 'Clinique Amitie',
-    },
-    totalAmount: 25000,
-    commission: 2750,
-    createdAt: new Date(),
-    status: 'ACTIVE'
-  },
-  {
-    id: 'RR-2',
-    date: new Date(),
-    time: '12:10',
-    patient: {
-      id: 'P1',
-      firstName: 'Moussa',
-      lastName: 'Diop',
-    },
-    medicalAccount: {
-      id: 'SN-H2',
-      name: 'Centre Hospital',
-    },
-    totalAmount: 45000,
-    commission: 3750,
-    createdAt: new Date(),
-    status: 'ACTIVE'
-  }
-]
 
 
 export default function RemoteRevenue() {

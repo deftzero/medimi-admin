@@ -5,13 +5,14 @@ import Dashboard from "../pages/admin/Dashboard";
 import MedicalAccounts from "../pages/admin/medical-accounts/MedicalAccounts";
 import Countries from "../pages/admin/countries/Countries";
 import Patients from "../pages/admin/patients/Patients";
-import Incomes from "../pages/admin/Incomes";
+import Incomes from "../pages/admin/incomes/Incomes";
 import RemoteRevenue from "../pages/admin/RemoteRevenue";
 import Users from "../pages/admin/users/Users";
 import Country from "../pages/admin/countries/Country";
 import Patient from "../pages/admin/patients/Patient";
 import User from "../pages/admin/users/User";
 import MedicalAccount from "../pages/admin/medical-accounts/MedicalAccount";
+import IncomeDetails from "../pages/admin/incomes/IncomeDetails";
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ export const router = createBrowserRouter([
       {
         path: "/incomes",
         element: <Incomes />
+      },
+      {
+        path: "/incomes/details",
+        element: <IncomeDetails />
       },
       {
         path: "/remote-revenue",
