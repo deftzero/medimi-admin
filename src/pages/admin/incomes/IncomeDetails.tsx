@@ -1,5 +1,5 @@
 import { Typography } from "antd";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ChevronLeft from '../../../assets/icons/chevron-left.svg?react'
 import Download from '../../../assets/icons/download.svg?react'
 import AppButton from "../../../components/ui/AppButton";
